@@ -11,7 +11,7 @@ type Service = {
 const SERVICES: Service[] = [
   {
     title: "Airport Transfers (Logan BOS)",
-    desc: "Premium airport transportation engineered around real flight schedules, pickup timing, luggage, and smooth curbside execution.",
+    desc: "Premium airport transportation engineered around real flight schedules—pickup timing, luggage, and smooth curbside execution.",
     image: "/images/services/airport-transfers.jpg",
     bullets: [
       "Flight tracking + dynamic pickup timing",
@@ -34,7 +34,7 @@ const SERVICES: Service[] = [
   },
   {
     title: "Hourly Chauffeur",
-    desc: "A dedicated chauffeur on standby for meetings, dinners, multi-stops, and flexible schedules without the stress of arranging multiple trips.",
+    desc: "A dedicated chauffeur on standby for meetings, dinners, multi-stops, and flexible schedules—without the stress of arranging multiple trips.",
     image: "/images/services/hourly-chauffeur.jpg",
     bullets: [
       "Ideal for multi-stop itineraries",
@@ -79,7 +79,7 @@ const SERVICES: Service[] = [
   },
   {
     title: "Prom & School Events",
-    desc: "A safe, professional, and memorable ride experience with a premium feel, ideal for group photos, entrances, and peace of mind.",
+    desc: "A safe, professional, and memorable ride experience with a premium feel—ideal for group photos, entrances, and peace of mind.",
     image: "/images/services/prom.jpg",
     bullets: [
       "Safety-first transportation with professional chauffeurs",
@@ -91,7 +91,7 @@ const SERVICES: Service[] = [
   },
   {
     title: "Group Transportation (Sprinter)",
-    desc: "Move groups comfortably in executive-grade vehicles for airport transfers, corporate travel, and events across New England.",
+    desc: "Move groups comfortably with an executive-grade approach—great for airport runs, corporate groups, and events across New England.",
     image: "/images/services/group-transportation.jpg",
     bullets: [
       "Ideal for 6–12 passengers (Sprinter)",
@@ -102,7 +102,7 @@ const SERVICES: Service[] = [
   },
   {
     title: "Point-to-Point",
-    desc: "Simple, clean, premium transportation from A to B. Perfect for dinners, hotels, airports, offices, and client pickups.",
+    desc: "Simple, clean, premium transportation from A to B—perfect for dinners, hotels, airports, offices, and client pickups.",
     image: "/images/services/point-to-point.jpg",
     bullets: [
       "Straightforward booking and routing",
@@ -136,8 +136,8 @@ export default function ServicesPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-200 md:text-lg">
-              Boston, New England, and NYC routes with a luxury transfers.
-              Corporate travel, events, and group transportation delivered with precision and
+              Boston, New England, and NYC routes with a luxury standard—airport transfers,
+              corporate travel, events, and group transportation delivered with precision and
               discretion.
             </p>
 
@@ -178,7 +178,7 @@ export default function ServicesPage() {
             <h2 className="text-4xl font-semibold">Services</h2>
             <p className="mt-4 text-neutral-300">
               Choose the experience that matches your schedule. Every service is delivered
-              with the same premium standard, clean vehicles, professional chauffeurs, and
+              with the same premium standard—clean vehicles, professional chauffeurs, and
               proactive communication.
             </p>
           </div>
@@ -335,11 +335,24 @@ function MiniCTA({
 }) {
   const isExternal = href.startsWith("tel:") || href.startsWith("mailto:");
 
-  const Comp = isExternal ? "a" : Link;
+  // Render separately to avoid mismatched props between <a> and <Link>
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        className="rounded-3xl border border-neutral-800/70 bg-neutral-950/30 p-6 hover:border-neutral-600/80"
+      >
+        <div className="text-sm font-semibold">{title}</div>
+        <div className="mt-2 text-sm text-neutral-300">{desc}</div>
+        <div className="mt-5 text-sm underline text-neutral-200 hover:text-white">
+          Continue
+        </div>
+      </a>
+    );
+  }
 
-  // @ts-expect-error - Link vs anchor props
   return (
-    <Comp
+    <Link
       href={href}
       className="rounded-3xl border border-neutral-800/70 bg-neutral-950/30 p-6 hover:border-neutral-600/80"
     >
@@ -348,6 +361,6 @@ function MiniCTA({
       <div className="mt-5 text-sm underline text-neutral-200 hover:text-white">
         Continue
       </div>
-    </Comp>
+    </Link>
   );
 }
