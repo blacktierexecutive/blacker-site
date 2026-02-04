@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Luxury Fleet: Sedans, SUVs, Sprinters & Motorcoaches | BlackTier",
+  description: "Executive sedans, premium SUVs, Sprinter vans, stretch limousines, minibuses, and 24–54 passenger motorcoaches for airport, corporate, and group transportation.",
+};
+
 import Link from "next/link";
 import { CONTACT } from "../lib/contact";
 import FleetHero from "../components/FleetHero";

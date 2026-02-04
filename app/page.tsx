@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Airport Car, Black Car & Group Transportation Boston | BlackTier Executives",
+  description: "Premium airport car service, black car, Sprinter vans, minibuses, and motorcoaches across Boston and New England. Logan Airport (BOS), events, and group travel.",
+};
+
 import Link from "next/link";
 import HeroCarousel from "./components/HeroCarousel";
 

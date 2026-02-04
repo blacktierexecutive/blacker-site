@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Chauffeur, Airport Transfers & Group Transportation | BlackTier Executives",
+  description: "Chauffeur service, Logan Airport transfers, Sprinter vans, minibuses, and motorcoaches for corporate travel, weddings, events, and group transportation across New England.",
+};
+
 import Link from "next/link";
 
 type Service = {

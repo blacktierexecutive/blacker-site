@@ -49,108 +49,163 @@ const STATES: StateData[] = [
       "Beverly",
       "Salem",
       "Gloucester",
-      "Lynn",
-      "Marblehead",
       "Plymouth",
-      "Brockton",
-      "Fall River",
-      "New Bedford",
-      "Cape Cod (Hyannis, Falmouth, Provincetown)",
+      "Hingham",
+      "Milton",
+      "Norwood",
+      "Braintree",
+      "Marblehead",
+      "Andover",
+      "Bedford",
+      "Concord",
+      "Acton",
     ],
-    note: "Logan (BOS) and surrounding metro coverage available by appointment.",
+    note: "Includes Logan Airport (BOS), Back Bay, Seaport, and major metro routes.",
   },
   {
     key: "NH",
     name: "New Hampshire",
     primary: [
-      { name: "Manchester", subtitle: "Metro hub" },
-      { name: "Nashua", subtitle: "Route-friendly from MA" },
-      { name: "Portsmouth", subtitle: "Seacoast" },
+      { name: "Manchester", subtitle: "Business travel & city access" },
+      { name: "Nashua", subtitle: "Southern NH corridor" },
+      { name: "Portsmouth", subtitle: "Seacoast & events" },
       { name: "Concord", subtitle: "Capital region" },
-      { name: "Derry", subtitle: "Southern NH" },
-      { name: "Dover", subtitle: "Seacoast access" },
+      { name: "Salem", subtitle: "Southern NH access" },
+      { name: "Derry", subtitle: "Regional coverage" },
     ],
-    more: ["Salem (NH)", "Bedford", "Merrimack", "Keene"],
+    more: [
+      "Bedford",
+      "Merrimack",
+      "Hudson",
+      "Exeter",
+      "Hampton",
+      "Keene",
+      "Hanover",
+      "Londonderry",
+      "Rye",
+      "Dover",
+      "Durham",
+      "Laconia",
+    ],
+    note: "Ideal for city-to-city transfers and airport service into Massachusetts.",
   },
   {
     key: "RI",
     name: "Rhode Island",
     primary: [
-      { name: "Providence", subtitle: "Downtown + universities" },
-      { name: "Newport", subtitle: "Weddings + events" },
-      { name: "Warwick", subtitle: "Regional access" },
-      { name: "Cranston", subtitle: "Metro area" },
-      { name: "Pawtucket", subtitle: "Metro area" },
+      { name: "Providence", subtitle: "Downtown & universities" },
+      { name: "Newport", subtitle: "Weddings & waterfront events" },
+      { name: "Warwick", subtitle: "Airport area & corporate" },
+      { name: "Cranston", subtitle: "Metro coverage" },
+      { name: "Pawtucket", subtitle: "Regional" },
+      { name: "East Greenwich", subtitle: "Upscale events & dining" },
     ],
-    more: [],
+    more: [
+      "Narragansett",
+      "Westerly",
+      "Barrington",
+      "Bristol",
+      "Middletown",
+      "North Kingstown",
+      "Smithfield",
+      "Johnston",
+    ],
+    note: "Popular for events, weddings, and coastal trips.",
   },
   {
     key: "CT",
     name: "Connecticut",
     primary: [
-      { name: "Stamford", subtitle: "Corporate corridor" },
-      { name: "Greenwich", subtitle: "VIP + executive travel" },
-      { name: "New Haven", subtitle: "Yale + metro" },
       { name: "Hartford", subtitle: "Capital region" },
-      { name: "Norwalk", subtitle: "Route-friendly" },
-      { name: "Westport", subtitle: "Coastal access" },
+      { name: "New Haven", subtitle: "Yale area, downtown" },
+      { name: "Stamford", subtitle: "Corporate corridor" },
+      { name: "Greenwich", subtitle: "Luxury travel" },
+      { name: "Bridgeport", subtitle: "Regional access" },
+      { name: "Norwalk", subtitle: "Events & corporate" },
     ],
-    more: ["Bridgeport", "Danbury"],
+    more: [
+      "Westport",
+      "Fairfield",
+      "Milford",
+      "Stratford",
+      "Danbury",
+      "Waterbury",
+      "East Hartford",
+      "Glastonbury",
+      "Mystic",
+    ],
+    note: "Connecticut routes often pair with NYC availability (schedule dependent).",
   },
   {
     key: "ME",
     name: "Maine",
     primary: [
-      { name: "Portland", subtitle: "Downtown + waterfront" },
-      { name: "South Portland", subtitle: "Regional access" },
-      { name: "Kennebunk", subtitle: "Coastal destination" },
-      { name: "Ogunquit", subtitle: "Coastal destination" },
-      { name: "Bangor", subtitle: "Northern hub" },
+      { name: "Portland", subtitle: "Downtown & waterfront" },
+      { name: "Kennebunk", subtitle: "Coastal & events" },
+      { name: "York", subtitle: "Seaside travel" },
+      { name: "Ogunquit", subtitle: "Weddings & weekends" },
+      { name: "Biddeford", subtitle: "Regional coverage" },
+      { name: "Lewiston", subtitle: "Central Maine access" },
     ],
-    more: [],
+    more: [
+      "Freeport",
+      "Brunswick",
+      "Augusta",
+      "Bangor",
+      "Old Orchard Beach",
+      "Scarborough",
+      "Falmouth",
+    ],
+    note: "Seasonal trips and event transportation available based on routing.",
   },
   {
     key: "VT",
     name: "Vermont",
     primary: [
-      { name: "Burlington", subtitle: "Lake Champlain region" },
-      { name: "Stowe", subtitle: "Resort destination" },
+      { name: "Burlington", subtitle: "Downtown & lake region" },
+      { name: "Stowe", subtitle: "Resorts & winter travel" },
       { name: "Montpelier", subtitle: "Capital region" },
-      { name: "Rutland", subtitle: "Regional access" },
+      { name: "Killington", subtitle: "Ski & events" },
+      { name: "Manchester", subtitle: "Southern VT access" },
+      { name: "Woodstock", subtitle: "Luxury retreats" },
     ],
-    more: [],
+    more: [
+      "Middlebury",
+      "Rutland",
+      "Bennington",
+      "Waterbury",
+      "Waitsfield",
+      "Jay",
+    ],
+    note: "Long-distance city-to-city and resort transportation based on schedule.",
   },
 ];
 
 const NYC = {
   title: "New York City",
-  items: [
-    "Boston ⇄ NYC (city-to-city transfers)",
-    "NYC business districts and hotels",
-    "Events, shows, and special occasions",
-    "Airport connections (JFK / LGA / EWR) available upon request",
+  subtitle: "City-to-city transfers (availability by schedule)",
+  primary: [
+    { name: "Manhattan", subtitle: "Midtown, Downtown, UES/UWS" },
+    { name: "JFK", subtitle: "Airport transfers (schedule dependent)" },
+    { name: "LGA", subtitle: "Airport transfers (schedule dependent)" },
+    { name: "EWR", subtitle: "Airport transfers (schedule dependent)" },
   ],
 };
 
-const CORRIDORS = [
-  "Boston ⇄ Providence",
-  "Boston ⇄ Worcester",
-  "Boston ⇄ Portsmouth",
-  "Boston ⇄ Manchester / Nashua",
-  "Boston ⇄ Hartford",
-  "Boston ⇄ Stamford / Greenwich",
-  "Boston ⇄ Portland (ME)",
-  "Boston ⇄ Cape Cod",
-  "Boston ⇄ NYC",
-];
-
 export default function ServiceAreaPage() {
   const [active, setActive] = useState<StateKey>("MA");
+  const [showMore, setShowMore] = useState(false);
 
   const activeState = useMemo(
-    () => STATES.find((s) => s.key === active)!,
+    () => STATES.find((s) => s.key === active) ?? STATES[0],
     [active]
   );
+
+  const moreList = useMemo(() => {
+    const list = activeState.more ?? [];
+    if (!showMore) return list.slice(0, 18);
+    return list;
+  }, [activeState.more, showMore]);
 
   return (
     <main className="bg-neutral-950">
@@ -170,13 +225,14 @@ export default function ServiceAreaPage() {
             </p>
 
             <h1 className="mt-6 max-w-5xl text-4xl font-semibold leading-tight md:text-6xl">
-              Boston, New England, and NYC — premium city-to-city travel.
+              Boston and NYC travel.
             </h1>
 
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-neutral-200 md:text-lg">
-              We operate across major cities throughout New England and provide city-to-city transfers including New
-              York City. Airport transfers, corporate travel, events, and group transportation—delivered with a luxury
-              standard.
+              We operate across major cities throughout New England and provide
+              city-to-city transfers including New York City. Airport transfers,
+              corporate travel, events, and group transportation are delivered with a
+              luxury standard.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -188,231 +244,271 @@ export default function ServiceAreaPage() {
                     "linear-gradient(135deg, rgb(var(--bt-gold)), rgba(255,255,255,0.95))",
                 }}
               >
-                Reserve Now
+                Reserve / Request Quote
               </Link>
 
-              <a
-                href={CONTACT.phoneHref}
-                className="inline-flex items-center justify-center rounded-2xl border border-neutral-600/80 bg-black/30 px-8 py-4 text-base font-semibold text-neutral-100 hover:border-neutral-400 md:text-lg"
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center rounded-2xl border border-neutral-700/80 bg-black/30 px-8 py-4 text-base font-semibold text-neutral-100 md:text-lg hover:border-neutral-500"
               >
-                Call {CONTACT.phoneDisplay}
-              </a>
+                View Services
+              </Link>
             </div>
 
-            <div className="mt-12 grid gap-4 md:grid-cols-4">
-              <Chip title="Logan (BOS)" desc="Airport-first operations" />
-              <Chip title="New England" desc="Major metros + key destinations" />
-              <Chip title="NYC" desc="City-to-city transfers" />
-              <Chip title="24/7 support" desc="Coordination by appointment" />
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              <Chip
+                title="Airport transfers"
+                desc="Logan (BOS) pickups and drop-offs across the region."
+              />
+              <Chip
+                title="Group transportation"
+                desc="Sprinters, minibuses, and motorcoaches for 8–54 passengers."
+              />
+              <Chip
+                title="Weddings & events"
+                desc="Guest shuttles, VIP arrivals, and coordinated staging."
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Towns */}
+      <section className="border-b border-neutral-900/80">
+        <div className="mx-auto w-full max-w-[1600px] px-6 py-14">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-semibold text-neutral-100 md:text-4xl">
+                Featured service areas
+              </h2>
+              <p className="mt-3 text-neutral-300">
+                Start here for high-demand towns where we regularly support airport
+                transfers, corporate travel, weddings, events, and group transportation.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 self-start rounded-2xl border border-neutral-700/80 bg-neutral-950/40 px-6 py-3 text-sm font-semibold text-neutral-100 hover:border-neutral-500 md:self-auto"
+            >
+              Request availability <span aria-hidden>→</span>
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <TownCard
+              title="Wellesley"
+              href="/service-area/wellesley"
+              subtitle="Executive travel, BOS airport transfers, weddings & events"
+            />
+            <TownCard
+              title="Waltham"
+              href="/service-area/waltham"
+              subtitle="Corporate schedules, group moves, Logan (BOS) pickups"
+            />
+            <TownCard
+              title="Newton"
+              href="/service-area/newton"
+              subtitle="Black car service, airport transfers, and group transportation"
+            />
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <Chip
+              title="Airport Transfers (BOS)"
+              desc="Logan pickups and drop-offs across the region."
+            />
+            <Chip
+              title="Group vehicles"
+              desc="Sprinters, minibuses, and motorcoaches (24–54 passengers)."
+            />
+            <Chip
+              title="Weddings & events"
+              desc="Guest shuttles, VIP arrivals, and coordinated staging."
+            />
           </div>
         </div>
       </section>
 
       {/* New England Coverage (Tabs) */}
-      <section className="border-t border-neutral-900/80">
-        <div className="mx-auto max-w-[1600px] px-6 py-24">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl font-semibold">New England coverage</h2>
-              <p className="mt-4 text-neutral-300">
-                Select a state to view primary service areas. We cover additional towns as well—if your route isn’t
-                listed, call and we’ll confirm.
+      <section className="border-b border-neutral-900/80">
+        <div className="mx-auto w-full max-w-[1600px] px-6 py-16">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-semibold md:text-4xl">
+                Major cities across New England
+              </h2>
+              <p className="mt-3 text-neutral-300">
+                Select a state to view our primary coverage areas. If you don’t see
+                your exact pickup/dropoff, reach out and we’ll confirm availability.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 rounded-2xl border border-neutral-800/70 bg-neutral-950/40 p-2">
+            <div className="flex items-center gap-2">
               {STATES.map((s) => (
                 <button
                   key={s.key}
-                  onClick={() => setActive(s.key)}
+                  onClick={() => {
+                    setActive(s.key);
+                    setShowMore(false);
+                  }}
                   className={[
-                    "rounded-xl px-4 py-2 text-sm font-semibold transition",
+                    "rounded-full border px-4 py-2 text-sm font-semibold transition",
                     active === s.key
-                      ? "text-neutral-950"
-                      : "text-neutral-200 hover:text-white",
+                      ? "border-neutral-500 bg-neutral-900/60 text-white"
+                      : "border-neutral-800/70 bg-neutral-950/40 text-neutral-300 hover:border-neutral-600/80",
                   ].join(" ")}
-                  style={
-                    active === s.key
-                      ? {
-                          background:
-                            "linear-gradient(135deg, rgb(var(--bt-gold)), rgba(255,255,255,0.95))",
-                        }
-                      : { background: "transparent" }
-                  }
                 >
-                  {s.name}
+                  {s.key}
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="mt-14 grid gap-10 lg:grid-cols-3">
-            {/* Primary cities */}
-            <div className="lg:col-span-2">
-              <div className="rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-10">
-                <div className="flex items-center justify-between gap-6">
-                  <div>
-                    <div className="text-sm text-neutral-400">Selected state</div>
-                    <div className="mt-1 text-2xl font-semibold">
-                      {activeState.name}
-                    </div>
-                  </div>
+          <div className="mt-10 grid gap-8 lg:grid-cols-2">
+            <div className="rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8">
+              <div className="text-xl font-semibold">{activeState.name}</div>
+              {activeState.note ? (
+                <div className="mt-3 text-sm text-neutral-300">
+                  {activeState.note}
+                </div>
+              ) : null}
 
-                  <a
-                    href={CONTACT.phoneHref}
-                    className="hidden rounded-2xl border border-neutral-700/80 bg-neutral-950/30 px-6 py-3 text-sm font-semibold hover:border-neutral-500 md:inline-flex"
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {activeState.primary.map((c) => (
+                  <div
+                    key={c.name}
+                    className="rounded-2xl border border-neutral-800/70 bg-black/20 p-5"
                   >
-                    Call for availability
-                  </a>
-                </div>
-
-                <div className="mt-8 grid gap-6 md:grid-cols-2">
-                  {activeState.primary.map((c) => (
-                    <div
-                      key={c.name}
-                      className="rounded-3xl border border-neutral-800/70 bg-black/20 p-8 hover:border-neutral-600/80"
-                    >
-                      <div className="text-lg font-semibold">{c.name}</div>
-                      <div className="mt-2 text-sm text-neutral-300">
-                        {c.subtitle}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {activeState.note ? (
-                  <div className="mt-8 rounded-2xl border border-neutral-800/70 bg-black/20 p-6 text-sm text-neutral-300">
-                    {activeState.note}
+                    <div className="font-semibold text-neutral-100">{c.name}</div>
+                    <div className="mt-2 text-sm text-neutral-300">{c.subtitle}</div>
                   </div>
-                ) : null}
-
-                {/* More areas (collapsible) */}
-                {activeState.more.length ? (
-                  <details className="mt-10 rounded-2xl border border-neutral-800/70 bg-black/20 p-6">
-                    <summary className="cursor-pointer text-sm font-semibold text-neutral-200">
-                      More areas in {activeState.name}
-                    </summary>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {activeState.more.map((m) => (
-                        <span
-                          key={m}
-                          className="rounded-full border border-neutral-800/70 bg-black/25 px-3 py-1 text-xs text-neutral-200"
-                        >
-                          {m}
-                        </span>
-                      ))}
-                    </div>
-                  </details>
-                ) : null}
+                ))}
               </div>
             </div>
 
-            {/* Side: City-to-city corridors */}
-            <div className="rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-10">
-              <div className="text-sm text-neutral-400">City-to-city</div>
-              <div className="mt-2 text-2xl font-semibold">Popular corridors</div>
-              <p className="mt-4 text-sm text-neutral-300">
-                These are frequent routes. For custom itineraries, call and we’ll coordinate timing and pickup strategy.
-              </p>
-
-              <ul className="mt-7 space-y-2 text-sm text-neutral-300">
-                {CORRIDORS.map((i) => (
-                  <li key={i} className="flex gap-2">
-                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-300/70" />
-                    <span>{i}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-10 flex flex-col gap-3">
-                <Link
-                  href="/book"
-                  className="inline-flex items-center justify-center rounded-2xl px-6 py-3 font-semibold text-neutral-950 hover:opacity-95"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, rgb(var(--bt-gold)), rgba(255,255,255,0.95))",
-                  }}
-                >
-                  Reserve
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-2xl border border-neutral-700/80 bg-neutral-950/30 px-6 py-3 font-semibold hover:border-neutral-500"
-                >
-                  Contact Us
-                </Link>
+            <div className="rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8">
+              <div className="text-xl font-semibold">More towns</div>
+              <div className="mt-3 text-sm text-neutral-300">
+                We operate across surrounding towns as routing allows.
               </div>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {moreList.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-neutral-800/70 bg-black/20 px-3 py-1 text-xs text-neutral-200"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {activeState.more.length > 18 ? (
+                <button
+                  onClick={() => setShowMore((v) => !v)}
+                  className="mt-8 inline-flex items-center justify-center rounded-2xl border border-neutral-700/80 bg-neutral-950/40 px-6 py-3 text-sm font-semibold text-neutral-100 hover:border-neutral-500"
+                >
+                  {showMore ? "Show fewer towns" : "Show more towns"}
+                </button>
+              ) : null}
+            </div>
+          </div>
+
+          {/* NYC strip */}
+          <div className="mt-12 rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <div className="text-2xl font-semibold">{NYC.title}</div>
+                <div className="mt-2 text-neutral-300">{NYC.subtitle}</div>
+              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-2xl border border-neutral-700/80 bg-neutral-950/40 px-8 py-4 font-semibold text-neutral-100 hover:border-neutral-500"
+              >
+                Request NYC availability
+              </Link>
+            </div>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {NYC.primary.map((c) => (
+                <div
+                  key={c.name}
+                  className="rounded-2xl border border-neutral-800/70 bg-black/20 p-5"
+                >
+                  <div className="font-semibold text-neutral-100">{c.name}</div>
+                  <div className="mt-2 text-sm text-neutral-300">{c.subtitle}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* NYC block */}
-      <section className="border-t border-neutral-900/80">
-        <div className="mx-auto max-w-[1600px] px-6 py-24">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-            <div>
-              <h2 className="text-4xl font-semibold">{NYC.title}</h2>
+      {/* Operating notes + CTA */}
+      <section className="border-b border-neutral-900/80">
+        <div className="mx-auto w-full max-w-[1600px] px-6 py-16">
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8 lg:col-span-2">
+              <h2 className="text-2xl font-semibold">How we operate</h2>
               <p className="mt-4 text-neutral-300">
-                We provide city-to-city service between Boston and New York City, including executive travel, events,
-                and airport connections upon request.
+                We support scheduled transportation across Boston and New England,
+                including airport transfers, corporate travel, and event logistics.
+                For larger vehicles and complex itineraries, request a quote so we
+                can confirm routing, timing, staging, and fees.
               </p>
 
-              <ul className="mt-8 space-y-2 text-sm text-neutral-300">
-                {NYC.items.map((i) => (
-                  <li key={i} className="flex gap-2">
-                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-neutral-300/70" />
-                    <span>{i}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <Chip
+                  title="Meet & greet"
+                  desc="Available inside terminal where permitted."
+                />
+                <Chip
+                  title="Child seats"
+                  desc="Available by request — confirm when booking."
+                />
+                <Chip
+                  title="Group travel"
+                  desc="Sprinter, minibus, and motorcoach options."
+                />
+              </div>
+            </div>
 
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href={CONTACT.phoneHref}
+            <div className="rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8">
+              <h2 className="text-2xl font-semibold">Reserve / request a quote</h2>
+              <p className="mt-4 text-neutral-300">
+                Reservations for sedans and SUVs can be booked quickly. For 8+
+                passenger vehicles and custom itineraries, request a quote.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-4">
+                <Link
+                  href="/book"
                   className="inline-flex items-center justify-center rounded-2xl px-8 py-4 font-semibold text-neutral-950 hover:opacity-95"
                   style={{
                     background:
                       "linear-gradient(135deg, rgb(var(--bt-gold)), rgba(255,255,255,0.95))",
                   }}
                 >
-                  Call for NYC availability
-                </a>
+                  Reserve / Request Quote
+                </Link>
 
                 <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center rounded-2xl border border-neutral-700/80 bg-neutral-950/30 px-8 py-4 font-semibold hover:border-neutral-500"
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-2xl border border-neutral-700/80 bg-neutral-950/40 px-8 py-4 font-semibold text-neutral-100 hover:border-neutral-500"
                 >
-                  View Services
+                  Contact Us
                 </Link>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-3xl border border-neutral-800/70">
-              <div
-                className="h-[420px] w-full bg-cover bg-center"
-                style={{ backgroundImage: "url(/images/service-area/nyc.jpg)" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="rounded-2xl border border-neutral-700/70 bg-black/45 p-6">
-                  <div className="text-sm font-semibold">NYC service</div>
-                  <div className="mt-2 text-sm text-neutral-200">
-                    City-to-city transfers · VIP coordination · Airport connections upon request
-                  </div>
-                </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom CTA */}
-          <div className="mt-14 rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-10">
-            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="mt-12 rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div>
                 <div className="text-2xl font-semibold">Not seeing your route?</div>
                 <div className="mt-2 text-neutral-300">
-                  Share pickup, dropoff, date/time, and passenger count. We’ll confirm availability and routing.
+                  Share pickup, dropoff, date/time, and passenger count. We’ll
+                  confirm availability and routing.
                 </div>
               </div>
               <a
@@ -430,6 +526,45 @@ export default function ServiceAreaPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+function TownCard({
+  title,
+  subtitle,
+  href,
+}: {
+  title: string;
+  subtitle: string;
+  href: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8 transition hover:border-neutral-600/80"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <div className="text-xl font-semibold text-neutral-100">{title}</div>
+          <div className="mt-2 text-sm text-neutral-300">{subtitle}</div>
+        </div>
+        <span className="text-neutral-400 transition group-hover:text-neutral-200">
+          →
+        </span>
+      </div>
+
+      <div className="mt-6 flex flex-wrap gap-2">
+        <span className="rounded-full border border-neutral-800/70 bg-black/30 px-3 py-1 text-xs text-neutral-300">
+          Chauffeur / Black car
+        </span>
+        <span className="rounded-full border border-neutral-800/70 bg-black/30 px-3 py-1 text-xs text-neutral-300">
+          Logan (BOS)
+        </span>
+        <span className="rounded-full border border-neutral-800/70 bg-black/30 px-3 py-1 text-xs text-neutral-300">
+          Sprinter / Minibus / Coach
+        </span>
+      </div>
+    </Link>
   );
 }
 
