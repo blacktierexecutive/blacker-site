@@ -1,6 +1,8 @@
 export const metadata = {
-  title: "Chauffeur, Airport Transfers & Group Transportation | BlackTier Executives",
-  description: "Chauffeur service, Logan Airport transfers, Sprinter vans, minibuses, and motorcoaches for corporate travel, weddings, events, and group transportation across New England.",
+  title:
+    "Chauffeur, Airport Transfers & Group Transportation | BlackTier Executives",
+  description:
+    "Chauffeur service, Logan Airport transfers, Sprinter vans, minibuses, and motorcoaches for corporate travel, weddings, events, and group transportation across New England.",
 };
 
 import Link from "next/link";
@@ -141,9 +143,9 @@ export default function ServicesPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-200 md:text-lg">
-              Boston, New England, and NYC routes with a luxury standard—airport transfers,
-              corporate travel, events, and group transportation delivered with precision and
-              discretion.
+              Boston, New England, and NYC routes with a luxury standard—airport
+              transfers, corporate travel, events, and group transportation
+              delivered with precision and discretion.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -168,7 +170,10 @@ export default function ServicesPage() {
 
             {/* Trust chips */}
             <div className="mt-12 grid gap-4 md:grid-cols-3">
-              <TrustChip title="Flight tracking" desc="Airport pickups aligned to real arrival time." />
+              <TrustChip
+                title="Flight tracking"
+                desc="Airport pickups aligned to real arrival time."
+              />
               <TrustChip title="Meet & Greet" desc="Inside terminal pickup available." />
               <TrustChip title="Child seats" desc="Available upon request for families." />
             </div>
@@ -182,9 +187,9 @@ export default function ServicesPage() {
           <div className="max-w-2xl">
             <h2 className="text-4xl font-semibold">Services</h2>
             <p className="mt-4 text-neutral-300">
-              Choose the experience that matches your schedule. Every service is delivered
-              with the same premium standard—clean vehicles, professional chauffeurs, and
-              proactive communication.
+              Choose the experience that matches your schedule. Every service is
+              delivered with the same premium standard—clean vehicles,
+              professional chauffeurs, and proactive communication.
             </p>
           </div>
 
@@ -203,10 +208,52 @@ export default function ServicesPage() {
             <div>
               <h3 className="text-3xl font-semibold">Boston · New England · NYC</h3>
               <p className="mt-4 text-neutral-300">
-                We operate across Boston and New England with city-to-city service that includes
-                NYC routes. For complex itineraries, group movement, or special requests, call or
-                email and we’ll coordinate it end-to-end.
+                We operate across Boston and New England with city-to-city
+                service that includes NYC routes. For complex itineraries, group
+                movement, or special requests, call or email and we’ll coordinate
+                it end-to-end.
               </p>
+
+              {/* ✅ SEO: internal links to town pages */}
+              <div className="mt-8 rounded-3xl border border-neutral-800/70 bg-neutral-950/30 p-6">
+                <div className="text-sm font-semibold text-neutral-100">
+                  Local Service Areas
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+                  We provide chauffeur, airport transfer, and group transportation
+                  services in{" "}
+                  <Link
+                    href="/service-area/newton"
+                    className="underline underline-offset-4 hover:text-white"
+                  >
+                    Newton
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/service-area/waltham"
+                    className="underline underline-offset-4 hover:text-white"
+                  >
+                    Waltham
+                  </Link>
+                  , and{" "}
+                  <Link
+                    href="/service-area/wellesley"
+                    className="underline underline-offset-4 hover:text-white"
+                  >
+                    Wellesley
+                  </Link>
+                  , with full coverage across Boston and New England.
+                </p>
+
+                <div className="mt-4">
+                  <Link
+                    href="/service-area"
+                    className="text-sm font-semibold underline underline-offset-4 text-neutral-200 hover:text-white"
+                  >
+                    View all service areas
+                  </Link>
+                </div>
+              </div>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
@@ -242,7 +289,8 @@ export default function ServicesPage() {
                 <div className="rounded-2xl border border-neutral-700/70 bg-black/45 p-5">
                   <div className="text-sm font-semibold">Popular use cases</div>
                   <div className="mt-2 text-sm text-neutral-300">
-                    BOS transfers · Corporate travel · Weddings · Events · Group trips · NYC runs
+                    BOS transfers · Corporate travel · Weddings · Events · Group
+                    trips · NYC runs
                   </div>
                 </div>
               </div>
@@ -252,7 +300,11 @@ export default function ServicesPage() {
           {/* Final CTA strip */}
           <div className="mt-14 grid gap-6 rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8 md:grid-cols-3">
             <MiniCTA title="Reserve" desc="Book through our system in minutes." href="/book" />
-            <MiniCTA title="Call" desc="Talk to a coordinator for custom needs." href="tel:+10000000000" />
+            <MiniCTA
+              title="Call"
+              desc="Talk to a coordinator for custom needs."
+              href="tel:+10000000000"
+            />
             <MiniCTA
               title="Email"
               desc="Share itinerary details and we’ll confirm."
