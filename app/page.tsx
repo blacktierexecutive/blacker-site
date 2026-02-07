@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Airport Car, Black Car & Group Transportation Boston | BlackTier Executives",
-  description: "Premium airport car service, black car, Sprinter vans, minibuses, and motorcoaches across Boston and New England. Logan Airport (BOS), events, and group travel.",
+  description:
+    "Premium airport car service, black car, Sprinter vans, minibuses, and motorcoaches across Boston and New England. Logan Airport (BOS), events, and group travel.",
 };
 
 import Link from "next/link";
@@ -146,6 +147,47 @@ export default function HomePage() {
               Phone support is coming soon.
             </p>
 
+            {/* ✅ SEO: Home → Town internal links */}
+            <div className="mt-6 rounded-3xl border border-neutral-800/70 bg-neutral-950/30 p-6">
+              <div className="text-sm font-semibold text-neutral-100">
+                Popular local service areas
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+                We provide airport transfers, chauffeur service, and group
+                transportation in{" "}
+                <Link
+                  href="/service-area/newton"
+                  className="underline underline-offset-4 hover:text-white"
+                >
+                  Newton
+                </Link>
+                ,{" "}
+                <Link
+                  href="/service-area/waltham"
+                  className="underline underline-offset-4 hover:text-white"
+                >
+                  Waltham
+                </Link>
+                , and{" "}
+                <Link
+                  href="/service-area/wellesley"
+                  className="underline underline-offset-4 hover:text-white"
+                >
+                  Wellesley
+                </Link>
+                , with full coverage across Boston and New England.
+              </p>
+
+              <div className="mt-4">
+                <Link
+                  href="/service-area"
+                  className="text-sm font-semibold underline underline-offset-4 text-neutral-200 hover:text-white"
+                >
+                  View all service areas
+                </Link>
+              </div>
+            </div>
+
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/book"
@@ -210,7 +252,6 @@ function FleetTile({
       <h3 className="text-xl font-semibold">{title}</h3>
       <p className="mt-2 text-sm text-neutral-300">{meta}</p>
 
-      {/* Image */}
       <div className="relative mt-6 overflow-hidden rounded-2xl border border-neutral-800/70">
         <div
           className="h-40 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.04]"
