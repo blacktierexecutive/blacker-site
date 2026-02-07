@@ -1,5 +1,6 @@
 export const metadata = {
-  title: "Airport Car, Black Car & Group Transportation Boston | BlackTier Executives",
+  title:
+    "Airport Car, Black Car & Group Transportation Boston | BlackTier Executives",
   description:
     "Premium airport car service, black car, Sprinter vans, minibuses, and motorcoaches across Boston and New England. Logan Airport (BOS), events, and group travel.",
 };
@@ -9,9 +10,47 @@ import HeroCarousel from "./components/HeroCarousel";
 
 const EMAIL = "blacktierexecutive@gmail.com";
 
+const SITE_URL = "https://www.blacktierexecutive.com";
+
 export default function HomePage() {
+  // ✅ Schema: LocalBusiness / TransportationService (JSON-LD)
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "TransportationService"],
+    name: "BlackTier Executives",
+    url: SITE_URL,
+    email: EMAIL,
+    areaServed: [
+      { "@type": "City", name: "Boston, MA" },
+      { "@type": "AdministrativeArea", name: "New England" },
+    ],
+    description:
+      "Premium chauffeur-driven transportation across Boston and New England. Airport transfers to Logan (BOS), executive black car service, Sprinter vans, minibuses, motorcoaches, weddings, events, and group transportation.",
+    serviceType: [
+      "Airport Transfers (Logan BOS)",
+      "Chauffeur Service",
+      "Black Car Service",
+      "Corporate / Executive Travel",
+      "City-to-City Transportation",
+      "Group Transportation (Sprinter Vans)",
+      "Minibus Transportation",
+      "Motorcoach / Bus Transportation",
+      "Wedding Transportation",
+      "Event Transportation",
+      "Prom / School Events Transportation",
+    ],
+    // If/when you add a phone number later, we can add:
+    // telephone: "+1XXXXXXXXXX",
+  };
+
   return (
     <main className="bg-neutral-950">
+      {/* ✅ SEO: Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Hero (pulled up behind sticky header to remove top blank area) */}
       <section className="-mt-16 pt-16 md:-mt-20 md:pt-20">
         <HeroCarousel />
