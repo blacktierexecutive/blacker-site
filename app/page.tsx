@@ -1,19 +1,17 @@
 export const metadata = {
-  title:
-    "Airport Car, Black Car & Group Transportation Boston | BlackTier Executives",
+  title: "Boston Chauffeur, Airport Car & Sprinter Vans | BlackTier Executives",
   description:
-    "Premium airport car service, black car, Sprinter vans, minibuses, and motorcoaches across Boston and New England. Logan Airport (BOS), events, and group travel.",
+    "Premium chauffeur, black car, Logan Airport (BOS) transfers, Sprinter vans, minibuses, and motorcoaches across Boston & New England—corporate travel, weddings, events, and group transportation. Serving Newton, Waltham, and Wellesley.",
 };
 
 import Link from "next/link";
 import HeroCarousel from "./components/HeroCarousel";
 
 const EMAIL = "blacktierexecutive@gmail.com";
-
 const SITE_URL = "https://www.blacktierexecutive.com";
 
 export default function HomePage() {
-  // ✅ Schema: LocalBusiness / TransportationService (JSON-LD)
+  //  Schema: LocalBusiness / TransportationService (JSON-LD)
   const structuredData = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "TransportationService"],
@@ -22,6 +20,9 @@ export default function HomePage() {
     email: EMAIL,
     areaServed: [
       { "@type": "City", name: "Boston, MA" },
+      { "@type": "City", name: "Newton, MA" },
+      { "@type": "City", name: "Waltham, MA" },
+      { "@type": "City", name: "Wellesley, MA" },
       { "@type": "AdministrativeArea", name: "New England" },
     ],
     description:
@@ -45,7 +46,7 @@ export default function HomePage() {
 
   return (
     <main className="bg-neutral-950">
-      {/* ✅ SEO: Structured Data */}
+      {/*  SEO: Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -76,7 +77,39 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-neutral-300">
               Less noise. More precision. A premium standard designed for airport,
-              corporate, and event transportation.
+              corporate, weddings/events, and group transportation.
+            </p>
+
+            {/*  SEO: Strong internal linking (high-signal, no layout risk) */}
+            <p className="mt-5 text-sm leading-relaxed text-neutral-300">
+              Start here:{" "}
+              <Link
+                href="/services"
+                className="underline underline-offset-4 hover:text-white"
+              >
+                Services
+              </Link>{" "}
+              ·{" "}
+              <Link
+                href="/fleet"
+                className="underline underline-offset-4 hover:text-white"
+              >
+                Fleet
+              </Link>{" "}
+              ·{" "}
+              <Link
+                href="/service-area"
+                className="underline underline-offset-4 hover:text-white"
+              >
+                Service Area
+              </Link>{" "}
+              ·{" "}
+              <Link
+                href="/about"
+                className="underline underline-offset-4 hover:text-white"
+              >
+                About
+              </Link>
             </p>
           </div>
 
@@ -87,7 +120,7 @@ export default function HomePage() {
             />
             <Card
               title="Corporate Travel"
-              desc="Discreet, punctual, consistent are built for executives and teams."
+              desc="Discreet, punctual, consistent—built for executives and teams."
             />
             <Card
               title="Weddings & Events"
@@ -99,7 +132,7 @@ export default function HomePage() {
             />
             <Card
               title="City-to-City"
-              desc="Boston to anywhere in New England. Comfort first travel."
+              desc="Boston to anywhere in New England—comfort-first travel."
             />
             <Card
               title="Prom & Celebrations"
@@ -137,8 +170,20 @@ export default function HomePage() {
                 Fleet designed for comfort and presence
               </h2>
               <p className="mt-4 text-neutral-300">
-                Executive sedans, premium SUVs, Sprinters, and limousines are kept
+                Executive sedans, premium SUVs, Sprinters, and limousines—kept
                 clean and consistent.
+              </p>
+
+              {/* SEO: Link equity into “Fleet” + “Services” */}
+              <p className="mt-5 text-sm text-neutral-300">
+                Need bigger vehicles? See{" "}
+                <Link
+                  href="/fleet"
+                  className="underline underline-offset-4 hover:text-white"
+                >
+                  Sprinter, minibus, and motorcoach options
+                </Link>{" "}
+                and request a quote code via email.
               </p>
             </div>
 
@@ -186,14 +231,14 @@ export default function HomePage() {
               Phone support is coming soon.
             </p>
 
-            {/* ✅ SEO: Home → Town internal links */}
+            {/* SEO: Home → Town internal links (kept, just tightened copy) */}
             <div className="mt-6 rounded-3xl border border-neutral-800/70 bg-neutral-950/30 p-6">
               <div className="text-sm font-semibold text-neutral-100">
                 Popular local service areas
               </div>
               <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                We provide airport transfers, chauffeur service, and group
-                transportation in{" "}
+                We provide airport transfers, chauffeur service, black car, and
+                group transportation in{" "}
                 <Link
                   href="/service-area/newton"
                   className="underline underline-offset-4 hover:text-white"
@@ -241,7 +286,7 @@ export default function HomePage() {
 
               <a
                 href={`mailto:${EMAIL}?subject=${encodeURIComponent(
-                  "Quote Code Request - BackTier Executives"
+                  "Quote Code Request - BlackTier Executives"
                 )}`}
                 className="inline-flex items-center justify-center rounded-2xl border border-neutral-700/80 bg-neutral-950/40 px-8 py-4 font-semibold hover:border-neutral-500"
               >
