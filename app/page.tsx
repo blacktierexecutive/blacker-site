@@ -231,85 +231,47 @@ export default function HomePage() {
               Phone support is coming soon.
             </p>
 
-            {/* SEO: Home → Town internal links (kept, just tightened copy) */}
-            <div className="mt-6 rounded-3xl border border-neutral-800/70 bg-neutral-950/30 p-6">
-              <div className="text-sm font-semibold text-neutral-100">
-                Popular local service areas
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                We provide airport transfers, chauffeur service, black car, and
-                group transportation in{" "}
-                <Link
-                  href="/service-area/newton"
-                  className="underline underline-offset-4 hover:text-white"
-                >
-                  Newton
-                </Link>
-                ,{" "}
-                <Link
-                  href="/service-area/waltham"
-                  className="underline underline-offset-4 hover:text-white"
-                >
-                  Waltham
-                </Link>
-                , and{" "}
-                <Link
-                  href="/service-area/wellesley"
-                  className="underline underline-offset-4 hover:text-white"
-                >
-                  Wellesley
-                </Link>
-                , with full coverage across Boston and New England.
-              </p>
+              <div className="mt-10 rounded-3xl border border-neutral-800/80 bg-neutral-950/40 backdrop-blur-sm p-6">
+                <div className="text-2xl font-semibold text-neutral-100">
+                  Boston Group Transportation
+                </div>
 
-              <div className="mt-4">
-                <Link
-                  href="/service-area"
-                  className="text-sm font-semibold underline underline-offset-4 text-neutral-200 hover:text-white"
-                >
-                  View all service areas
-                </Link>
-              </div>
-            </div>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-300">
+                  Explore premium charter buses, corporate shuttles, minibuses, and
+                  motorcoaches for airport transfers, events, and group travel across
+                  Greater Boston.
+                </p>
 
-            {/* SEO: Home → New bus/group landing pages */}
-            <div className="mt-6 rounded-3xl border border-neutral-800/70 bg-neutral-950/30 p-6">
-              <div className="text-sm font-semibold text-neutral-100">
-                Popular group transportation pages
+                <div className="mt-5 flex flex-wrap gap-3 text-sm">
+                  <Link
+                    href="/boston-charter-bus"
+                    className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+                  >
+                    Boston Charter Bus
+                  </Link>
+
+                  <Link
+                    href="/cambridge-charter-bus"
+                    className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+                  >
+                    Cambridge Charter Bus
+                  </Link>
+
+                  <Link
+                    href="/waltham-charter-bus"
+                    className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+                  >
+                    Waltham Charter Bus
+                  </Link>
+
+                  <Link
+                    href="/boston-corporate-shuttle"
+                    className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+                  >
+                    Boston Corporate Shuttle
+                  </Link>
+                </div>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
-                Explore premium bus and group transportation options in Boston,
-                including{" "}
-                <Link
-                  href="/sprinter-van-boston"
-                  className="underline underline-offset-4 hover:text-white"
-                >
-                  Sprinter Van Boston
-                </Link>
-                ,{" "}
-                <Link
-                  href="/minibus-rental-boston"
-                  className="underline underline-offset-4 hover:text-white"
-                >
-                  Minibus Rental Boston
-                </Link>
-                ,{" "}
-                <Link
-                  href="/motorcoach-rental-boston"
-                  className="underline underline-offset-4 hover:text-white"
-                >
-                  Motorcoach Rental Boston
-                </Link>
-                , and{" "}
-                <Link
-                  href="/charter-bus-boston"
-                  className="underline underline-offset-4 hover:text-white"
-                >
-                  Charter Bus Boston
-                </Link>
-                .
-              </p>
-            </div>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link

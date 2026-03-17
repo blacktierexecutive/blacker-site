@@ -296,6 +296,46 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+                    <div className="mt-10 rounded-3xl border border-neutral-800/80 bg-neutral-950/40 backdrop-blur-sm p-6">
+  
+            <div className="text-2xl font-semibold tracking-wide text-neutral-200">
+              Popular Group Transportation Routes
+            </div>
+
+            <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+              Explore high-demand charter and corporate shuttle services across Greater Boston.
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-3 text-sm">
+              <Link
+                href="/boston-charter-bus"
+                className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+              >
+                Boston Charter Bus
+              </Link>
+
+              <Link
+                href="/cambridge-charter-bus"
+                className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+              >
+                Cambridge Charter Bus
+              </Link>
+
+              <Link
+                href="/waltham-charter-bus"
+                className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+              >
+                Waltham Charter Bus
+              </Link>
+
+              <Link
+                href="/boston-corporate-shuttle"
+                className="rounded-xl border border-neutral-700/70 px-4 py-2 hover:border-neutral-500 hover:bg-neutral-900 transition"
+              >
+                Corporate Shuttle Boston
+              </Link>
+            </div>
+          </div>
 
           {/* Final CTA strip */}
           <div className="mt-14 grid gap-6 rounded-3xl border border-neutral-800/70 bg-neutral-950/40 p-8 md:grid-cols-3">
