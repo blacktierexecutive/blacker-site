@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bt-gold: 215 170 96;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #0a0a0a;
+  color: white;
+}
